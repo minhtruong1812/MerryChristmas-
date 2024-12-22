@@ -10,8 +10,22 @@
 </head>
 
 <body >
-    <audio id="audio" src="./merry Christmas.mp3"></audio>
-    <audio id="audio" src="./FELIZ NAVIDAD.mp3"></audio>
+    <audio id="audio1" src="./merryChristmas.mp3"></audio>
+    <audio id="audio2" src="./FELIZNAVIDAD.mp3"></audio>
+
+<script>
+  const audio1 = document.getElementById("audio1");
+  const audio2 = document.getElementById("audio2");
+
+  // Hàm phát nhạc và chuyển bài
+  function playNext(currentAudio, nextAudio) {
+    currentAudio.play();
+    currentAudio.onended = () => playNext(nextAudio, currentAudio);
+  }
+
+  // Bắt đầu phát nhạc
+  playNext(audio1, audio2);
+</script>
 
     <div id="as" class="christmas-message">Merry Christmas</div>
     <div class="tree-container">
