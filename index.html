@@ -12,10 +12,12 @@
 <body >
     <audio id="audio1" src="./merryChristmas.mp3"></audio>
     <audio id="audio2" src="./FELIZNAVIDAD.mp3"></audio>
+    <audio id="audio3" src="./Jingle Bell Remix _ Crazy Frog x DJ Peace N _ Nguyễn Anh Tuấn.mp3"></audio>
 
 <script>
   const audio1 = document.getElementById("audio1");
   const audio2 = document.getElementById("audio2");
+  const audio3 = document.getElementById("audio3");
 
   // Hàm phát nhạc và chuyển bài
   function playNext(currentAudio, nextAudio) {
@@ -24,7 +26,7 @@
   }
 
   // Bắt đầu phát nhạc
-  playNext(audio1, audio2);
+  playNext(audio1, audio2, audio3);
 </script>
 
     <div id="as" class="christmas-message">Merry Christmas</div>
